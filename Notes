@@ -1,0 +1,21 @@
+Backpropagation is the core of the modern neural network. 
+backpropagation:
+  backpropagation is basically a chain of rule, applied backwards to compute how much each parameter is contributing to the error.
+  it efficiently evaluates the gradient of loss function, wrt to weights of a neural network. 
+  This allows us to iteratively tune the weights of neural network to minimize the loss function, there by improving the accuracy of the loss function.
+
+
+Forward Pass:
+  Simply take the inputs, pass through the model, compute output and loss, with no learning. 
+
+|Forward Pass | Backward Pass|
+------------------------------
+|Compute Outputs| Compute Gradients|
+|Input -> Loss | Loss -> Parameters|
+|Use current weights|Update Weights|
+|No learning yet|learning happens|
+
+Backpropagation go through the expression graph, recursively apply chain rule from calculus, this allows us to do derivate of g wrt to all internal nodes, inputs. 
+then we will be in a position to calculate/query grad, wrt to each parameter. with that, we will be knowing, how input parameters are effecting the output.
+
+derivate of output wrt to input parameter tells the slope, if we nudge the parameter, then it is going to change by slope.
